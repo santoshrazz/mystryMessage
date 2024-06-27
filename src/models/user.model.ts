@@ -10,7 +10,7 @@ interface User extends Document {
   password: string;
   verifyCode: string;
   isVerified: boolean;
-  verifyCodeExpiry: string;
+  verifyCodeExpiry: Date;
   isAcceptingMessages: boolean;
   messages: Message[];
 }
@@ -43,7 +43,7 @@ const UserSchema: Schema<User> = new Schema({
     type: String,
   },
   verifyCodeExpiry: {
-    type: String,
+    type: Date,
   },
   isVerified: {
     type: Boolean,

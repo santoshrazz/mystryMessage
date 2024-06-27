@@ -13,7 +13,7 @@ export async function sendVerificationEmail(
       EmailTemplate({
         email: email,
         username: username,
-        veificationCode: verificationCode, // Corrected this line
+        verificationCode: verificationCode, // Corrected this line
       })
     );
     resend.emails.send({
